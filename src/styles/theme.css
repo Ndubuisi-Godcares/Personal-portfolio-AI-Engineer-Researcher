@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Poppins:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Color Palette - Cyberpunk Theme */
+  --color-primary: #00D9FF;
+  --color-primary-rgb: 0, 217, 255;
+  --color-secondary: #9D4EDD;
+  --color-secondary-rgb: 157, 78, 221;
+  --color-accent-pink: #FF006E;
+  --color-accent-pink-rgb: 255, 0, 110;
+  --color-accent-green: #00FF41;
+  --color-accent-green-rgb: 0, 255, 65;
+  --color-navy: #0A0E27;
+  --color-navy-rgb: 10, 14, 39;
+  --color-dark: #0D1117;
+  --color-darker: #010409;
+  
+  /* Semantic Colors */
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #B4B9C5;
+  --color-text-muted: #6E7681;
+  
+  /* Typography */
+  --font-code: 'Space Mono', monospace;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Font Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-4xl: 6rem;
+  
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+  
+  /* Shadows - Neon Glow Effects */
+  --shadow-glow-primary: 0 0 20px rgba(var(--color-primary-rgb), 0.4),
+                          0 0 40px rgba(var(--color-primary-rgb), 0.2);
+  --shadow-glow-secondary: 0 0 20px rgba(var(--color-secondary-rgb), 0.4),
+                            0 0 40px rgba(var(--color-secondary-rgb), 0.2);
+  --shadow-glow-pink: 0 0 20px rgba(var(--color-accent-pink-rgb), 0.4),
+                       0 0 40px rgba(var(--color-accent-pink-rgb), 0.2);
+  --shadow-glow-green: 0 0 20px rgba(var(--color-accent-green-rgb), 0.4),
+                        0 0 40px rgba(var(--color-accent-green-rgb), 0.2);
+  
+  --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.3),
+                 0 10px 20px rgba(0, 0, 0, 0.2);
+  --shadow-card-hover: 0 10px 30px rgba(0, 0, 0, 0.4),
+                       0 20px 40px rgba(0, 0, 0, 0.3);
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent-pink) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--color-accent-pink) 0%, var(--color-primary) 100%);
+  --gradient-hero: linear-gradient(135deg, 
+                                   rgba(var(--color-primary-rgb), 0.2) 0%, 
+                                   rgba(var(--color-secondary-rgb), 0.2) 50%,
+                                   rgba(var(--color-accent-pink-rgb), 0.1) 100%);
+  
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+  
+  /* Z-index */
+  --z-navigation: 1000;
+  --z-dropdown: 2000;
+  --z-modal: 3000;
+  --z-toast: 4000;
+}
+
+/* Utility Classes */
+.glow-primary {
+  box-shadow: var(--shadow-glow-primary);
+}
+
+.glow-secondary {
+  box-shadow: var(--shadow-glow-secondary);
+}
+
+.glow-pink {
+  box-shadow: var(--shadow-glow-pink);
+}
+
+.glow-green {
+  box-shadow: var(--shadow-glow-green);
+}
+
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-border {
+  position: relative;
+  background: var(--color-dark);
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: var(--gradient-primary);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
