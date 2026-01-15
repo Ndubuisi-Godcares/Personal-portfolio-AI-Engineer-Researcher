@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Sparkles } from 'lucide-react';
 import { Button } from '/src/components/ui/button';
-import ResumePDF from '/src/components/assets/My_Resume.pdf';
+import ResumePDF from '/src/components/assets/Godcares_Resume.pdf';
 
 
 const Hero = () => {
@@ -191,7 +191,7 @@ const Hero = () => {
         {/* Resume Download */}
         <a
             href={ResumePDF}
-            download="Godcares_Ndubuisi_Resume.pdf"
+            download="Godcares_Resume.pdf"
         >
             <Button
             variant="outline"
